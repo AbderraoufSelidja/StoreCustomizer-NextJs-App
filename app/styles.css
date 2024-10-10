@@ -5,8 +5,9 @@
   position: relative;
 }
 @media (max-width: 767px) {
-  img {
-    height: 150px !important;
+  img.content-image,
+  img.carousel-image {
+    height: 170px !important;
   }
 }
 .store-title {
