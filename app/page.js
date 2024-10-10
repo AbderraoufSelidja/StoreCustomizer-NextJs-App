@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Swal from "sweetalert2";
 // Components
 import Preview from "./Preview";
+import Customize from "./Customize";
 import Link from 'next/link';
 import "./styles.css";
 const Home = () => {
@@ -189,7 +190,28 @@ const Home = () => {
         <button className="view-stores-button">View All Stores</button>
       </Link>
       {/* Customize component to allow the user to customizee his store */}
-      
+      <Customize
+        content={content}
+        setContent={setContent}
+        setModesVisible={setModesVisible}
+        isModesVisible={isModesVisible}
+        currentInsertIndex={currentInsertIndex}
+        setCurrentInsertIndex={setCurrentInsertIndex}
+        arrowDirection={arrowDirection}
+        setArrowDirection={setArrowDirection}
+        mode={mode}
+        setMode={setMode}
+        loading={loading}
+        setLoading={setLoading}
+        limits={limits}
+        videoFile={videoFile}
+        setVideoFile={setVideoFile}
+        posterImage={posterImage}
+        setPosterImage={setPosterImage}
+        products={products}
+        selectedProducts={selectedProducts}
+        setSelectedProducts={setSelectedProducts}
+      />
     </div>
   );
 };
