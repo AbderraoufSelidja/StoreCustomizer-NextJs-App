@@ -12,6 +12,7 @@ import {
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Swal from "sweetalert2";
 import Product from "./Product";
+import FroalaEditor from "./FroalaEditor";
 const Customize = ({
   content,
   setContent,
@@ -425,7 +426,11 @@ const Customize = ({
             <div className="text-input">
               {/* Text editor component for entering user text */}
               {/* 'indice' differentiates the Text component's purpose: "inputText": for user input, "item.value": for content preview*/}
-             
+              <FroalaEditor
+                inputText={inputText}
+                setInputText={setInputText}
+                indice={"inputText"}
+              />
               <button className="submit-button" onClick={handleTextSubmit}>
                 {loading ? (
                   <i className="fas fa-spinner fa-spin"></i>
