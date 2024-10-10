@@ -14,7 +14,7 @@ StoreCustomizer is a versatile store management and customization application bu
 ## Demo
 
 You can see a live demo of the application here:
- # [https://abderraoufselidja.github.io/React-MaterialUI-Notes-App/](https://abderraoufselidja.github.io/React-MaterialUI-Notes-App/).
+ # [https://abderraoufselidja.github.io/StoreCustomizer-NextJs-App/](https://abderraoufselidja.github.io/StoreCustomizer-NextJs-App/).
 
 
 ![Demo Screenshot](./src/imgs/Screenshot1.png)
