@@ -1,6 +1,5 @@
 // Text.js
 import React from "react";
-import FroalaEditor from "./FroalaEditor";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Swal from "sweetalert2";
 const Text = ({ content, item, index, editting, setEditting }) => {
@@ -22,7 +21,6 @@ const Text = ({ content, item, index, editting, setEditting }) => {
       {editting === index ? (
         <div className="edit-text-container">
           {/* 'indice' differentiates the Text component's purpose: "inputText": for user input, "item.value": for content preview*/}
-          <FroalaEditor content={content} index={index} indice={"item.value"} />
           <button
             onClick={() => {
               setEditting(null);
