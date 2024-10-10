@@ -1,0 +1,167 @@
+
+.preview {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.content-item {
+  position: relative;
+  margin-bottom: 30px; 
+  border-radius: 5px;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #f00;
+  transition: .3s;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10; 
+}
+
+.delete-icon:hover {
+  color: #c00; 
+}
+
+.content-text {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.content-image,
+.carousel-image {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.video-container {
+  position: relative;
+}
+.content-video {
+  height: 350px;
+  border-radius: 5px;
+}
+.form-container .title {
+  font-weight: 700;
+  text-align: center;
+}
+.form-container .message-container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.form-container .message-container .form-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.form-container .message-container .form-section-container label {
+  width: fit-content;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  color: rgb(5, 28, 78);
+  font-size: 16px;
+  font-weight: 600;
+}
+.form-container .message-container .form-section-container textarea.message {
+  height: 1.4375em;
+  border-radius: 4px;
+  color: #333;
+  font-size: 1rem;
+  padding: 16.5px 14px;
+  background-color: transparent;
+  font-weight: 400;
+  vertical-align: baseline;
+  width: 100%;
+  height: 150px;
+  resize: none;
+}
+.form-container .message-container .form-section-container input.email, 
+.form-container .message-container .form-section-container input.object {
+  box-sizing: content-box;
+  display: block; 
+  height: 1.4375em;
+  width: 40%;
+  resize: none;
+  padding: 16.5px 14px;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: transparent;
+  font-weight: 400;
+  border: 1px solid black;
+  resize: none;
+}
+.form-container .message-container .form-section-container input:focus,
+.form-container .message-container .form-section-container textarea:focus {
+  outline-color: rgb(248, 75, 14);
+  border: none;
+}
+
+.form-container button.submit {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-container button i {
+  margin-right: 5px;
+}
+.form-container button:hover {
+  background-color: #e65c00;
+}
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
+  gap: 10px;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+.preview .products-container {
+  background-color: #fff;
+}
+.product {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: box-shadow 0.3s, opacity .2s;
+}
+
+.product:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  border-radius: 4px;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.product-price {
+  color: #27ae60;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.slick-dots li button::before {
+  font-size: 8px;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #ff6a00;
+}
+
+.slick-dots li button:hover::before {
+  color: #a0a2ad;
+}

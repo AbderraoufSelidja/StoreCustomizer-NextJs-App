@@ -1,0 +1,561 @@
+.store-container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.store-title {
+  text-align: center;
+  color: #333;
+}
+
+.preview {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.content-item {
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #f00;
+  transition: 0.3s;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.delete-icon:hover {
+  color: #c00;
+}
+.edit-icon {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  color: #008cba;
+  transition: color 0.3s;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1;
+}
+.save-icon {
+  position: absolute;
+  top: 7px;
+  right: 40px;
+  color: #28a745;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.edit-icon:hover {
+  color: #007ba7;
+}
+.content-text {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.content-image,
+.carousel-image {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.video-container {
+  position: relative;
+}
+.content-video {
+  height: 350px;
+  width: 100%;
+  border-radius: 5px;
+}
+.form-container .title {
+  font-weight: 700;
+  text-align: center;
+}
+.form-container .message-container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.form-container .message-container .form-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.form-container .message-container .form-section-container label {
+  width: fit-content;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  color: rgb(5, 28, 78);
+  font-size: 16px;
+  font-weight: 600;
+}
+.form-container .message-container .form-section-container textarea.message {
+  height: 1.4375em;
+  border-radius: 4px;
+  color: #333;
+  font-size: 1rem;
+  padding: 16.5px 14px;
+  background-color: transparent;
+  font-weight: 400;
+  vertical-align: baseline;
+  width: 100%;
+  height: 150px;
+  resize: none;
+}
+.form-container .message-container .form-section-container input.email,
+.form-container .message-container .form-section-container input.object {
+  box-sizing: content-box;
+  display: block;
+  height: 1.4375em;
+  width: 40%;
+  resize: none;
+  padding: 16.5px 14px;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: transparent;
+  font-weight: 400;
+  border: 1px solid black;
+  resize: none;
+}
+.form-container .message-container .form-section-container input:focus,
+.form-container .message-container .form-section-container textarea:focus {
+  outline-color: #007bff;
+  border: none;
+}
+
+.form-container button.submit {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-container button.submit i {
+  margin-right: 5px;
+}
+.form-container button.submit:hover {
+  background-color: #e65c00;
+}
+.save-button {
+  margin-top: 20px;
+  padding: 10px 12px;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.save-button:hover {
+  background-color: #138496;
+}
+
+.customize-container {
+  position: fixed;
+  z-index: 4;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  transition: 0.3s;
+  position: absolute;
+  top: -22px;
+  left: 5px;
+  padding: 10px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.add-button:hover {
+  background-color: #0056b3;
+}
+.add-button i {
+  margin-left: 5px;
+}
+
+.modes-container {
+  box-sizing: border-box;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  margin: 20px 0 0;
+}
+@media (max-width: 767px) {
+  .modes-container {
+    flex-direction: column;
+  }
+}
+
+.modes-container.visible {
+  max-height: 70vh;
+}
+
+.buttons-container {
+  flex-basis: 50%;
+  background-color: #fff;
+}
+.mode-button {
+  padding: 10px;
+  margin: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.save-button i,
+.mode-button i,
+.submit-button i {
+  margin-right: 5px;
+}
+
+.mode-button.active {
+  background-color: #0056b3;
+}
+
+.mode-button:hover {
+  background-color: #0056b3;
+}
+
+.content-container {
+  flex: 1;
+  overflow: auto;
+  background-color: #fff;
+}
+.products-container {
+  display: grid;
+  padding-right: 75px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+.preview .products-container {
+  background-color: #fff;
+}
+
+.product {
+  position: relative;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: box-shadow 0.3s, opacity 0.2s;
+}
+
+.product:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  border-radius: 4px;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.product-price {
+  color: #27ae60;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.add-to-store {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 9px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-store:hover {
+  background-color: #2980b9;
+}
+
+.textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  resize: none;
+}
+
+.video-upload,
+.text-input,
+.image-upload,
+.carousel-upload,
+.form-input,
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+.fr-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.fr-view {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+.fr-view:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}
+
+.fr-view ::selection {
+  background-color: #007bff;
+  color: white;
+}
+
+.fr-wrapper {
+  min-height: 150px;
+}
+.fr-box.fr-basic .fr-element {
+  min-height: 150px;
+}
+label {
+  display: block;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+}
+/* .fr-plus-button {
+  display: none !important; 
+} */
+
+.form-input input {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+.form-input input {
+  cursor: initial;
+}
+.form-input input:focus {
+  outline-color: #007bff;
+}
+.input-file {
+  display: none;
+}
+label.custom-file {
+  display: block;
+  width: fit-content;
+  background-color: #fff;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+label.custom-file:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+label.custom-file:active {
+  background-color: #004494;
+  transform: translateY(0);
+}
+
+label.custom-file i {
+  margin-right: 7px;
+}
+.submit-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.submit-button i {
+  font-size: 18px;
+}
+
+/* Additional styling for the text input and buttons as needed */
+
+.slick-dots li button::before {
+  font-size: 8px;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #ff6a00;
+}
+
+.slick-dots li button:hover::before {
+  color: #a0a2ad;
+}
+.add-icon {
+  position: relative;
+  top: 50%;
+  translate: 0 -20px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #4caf50, #3e8e41);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.add-icon.carousel,
+.add-icon.position {
+  top: 30px;
+  left: 50%;
+  translate: -50%;
+}
+.add-icon.carousel {
+  background: #2196F3;
+  top: 16px;
+}
+.add-icon.product {
+  background: #2196F3;
+}
+.add-icon.position {
+  top: 0;
+  margin-bottom: 30px;
+}
+.add-icon:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.add-icon:active {
+  transform: scale(0.95); /* Slightly scale down on click */
+}
+.add-more {
+  margin: 20px 0;
+}
+.edit-carousel-container {
+  padding-top: 40px;
+}
+.input-file.carousel {
+  margin-top: 25px;
+}
+
+
+.subscription-type-selector {
+  margin: 1rem 0;
+}
+
+.subscription-type-selector label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.subscription-type-selector select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.subscription-type-selector select:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.view-stores-button {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.view-stores-button:hover {
+  background: linear-gradient(90deg, #0056b3, #003f7f);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.view-stores-button:active {
+  background: linear-gradient(90deg, #003f7f, #002a57);
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
