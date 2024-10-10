@@ -39,7 +39,7 @@ Or here:
 
 ## Subscription Plan Limitations
 
-![Subscription Plan Limitations](./src/imgs/Screenshot7.png)
+![Subscription Plan Limitations](./src/imgs/table.png)
 ## Installation
 
 To get a local copy up and running, follow these steps:
