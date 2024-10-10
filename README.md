@@ -19,7 +19,7 @@ You can see a live demo of the application here:
 
 Or here:
 
- # https://store-customizer-next-js-3ri0k93t5-abderraoufselidjas-projects.vercel.app/.
+ # https://store-customizer-next-js-app.vercel.app/
 
 
 ![Demo Screenshot](./src/imgs/Screenshot1.png)
