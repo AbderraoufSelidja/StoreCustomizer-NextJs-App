@@ -9,6 +9,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./storeContent.css";
 import Swal from "sweetalert2";
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 // Initialize Firestore
 const db = getFirestore(app);
