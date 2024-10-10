@@ -3,7 +3,12 @@
   border-top: 1px solid #ccc;
   padding-top: 20px;
 }
-
+@media (max-width: 767px) {
+  img.content-image,
+  img.carousel-image {
+    height: 170px !important;
+  }
+}
 .content-item {
   position: relative;
   margin-bottom: 30px; 
@@ -119,6 +124,12 @@
   gap: 10px;
   background-color: #f9f9f9;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .products-container {
+    grid-template-columns: initial;
+    padding-right: 0px;
+  }
 }
 .preview .products-container {
   background-color: #fff;

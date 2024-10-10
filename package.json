@@ -17,6 +17,7 @@
     "react-dom": "^18",
     "react-froala-wysiwyg": "^4.2.2",
     "react-slick": "^0.30.2",
+    "react-spinners": "^0.14.1",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.14.1"
   },

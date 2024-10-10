@@ -11,6 +11,7 @@ export async function generateStaticParams() {
     const querySnapshot = await getDocs(collection(db, "stores"));
     querySnapshot.forEach((doc) => {
       storeIds.push(doc.id); // Push each store ID into the array
+      console.log(storeIds);
     });
   } catch (error) {
     console.error("Error fetching store IDs: ", error);

@@ -4,7 +4,11 @@
   padding: 20px;
   position: relative;
 }
-
+@media (max-width: 767px) {
+  img {
+    height: 150px !important;
+  }
+}
 .store-title {
   text-align: center;
   color: #333;
@@ -250,6 +254,12 @@
   background-color: #f9f9f9;
   width: 100%;
 }
+@media (max-width: 767px) {
+  .products-container {
+    grid-template-columns: initial;
+    padding-right: 0px;
+  }
+}
 .preview .products-container {
   background-color: #fff;
 }
@@ -474,11 +484,11 @@ label.custom-file i {
   translate: -50%;
 }
 .add-icon.carousel {
-  background: #2196F3;
+  background: #2196f3;
   top: 16px;
 }
 .add-icon.product {
-  background: #2196F3;
+  background: #2196f3;
 }
 .add-icon.position {
   top: 0;
@@ -501,7 +511,6 @@ label.custom-file i {
 .input-file.carousel {
   margin-top: 25px;
 }
-
 
 .subscription-type-selector {
   margin: 1rem 0;
