@@ -1,8 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
-import "froala-editor/css/froala_style.min.css";
-import "froala-editor/css/froala_editor.pkgd.min.css";
-import "froala-editor/js/plugins.pkgd.min.js";
 
 // Dynamically import FroalaEditorComponent with SSR disabled
 const FroalaEditorComponent = dynamic(
@@ -11,6 +8,13 @@ const FroalaEditorComponent = dynamic(
 );
 
 const FroalaEditor = ({ inputText, setInputText, indice, content, index }) => {
+  useEffect(() => {
+    // Import Froala plugins only on the client side
+    require("froala-editor/js/plugins.pkgd.min.js");
+    require("froala-editor/css/froala_style.min.css");
+    require("froala-editor/css/froala_editor.pkgd.min.css");
+  }, []);
+
   return (
     <FroalaEditorComponent
       model={indice === "inputText" ? inputText : content[index].value}
