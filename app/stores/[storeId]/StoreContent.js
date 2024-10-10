@@ -1,23 +1,18 @@
 // StoreContent.jsx or StoreContent.tsx
 
 "use client";
-import React, { useEffect, useState } from "react";
-import { app } from "@/app/components/Firebase";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./storeContent.css";
 import Swal from "sweetalert2";
 
-// Initialize Firestore
-const db = getFirestore(app);
-
-const StoreContent = ({ params }) => {
+const StoreContent = ({ store }) => {
   const [userMessage, setUserMessage] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userMessageObject, setUserMessageObject] = useState("");
-  const [store, setStore] = useState(null);
+
   const handleSendMessage = (event) => {
     event.preventDefault();
     Swal.fire({
@@ -34,32 +29,6 @@ const StoreContent = ({ params }) => {
     setUserMessage("");
     setUserMessageObject("");
   };
-  useEffect(() => {
-    const fetchStoreContent = async () => {
-      const storeId = params.storeId; // Get storeId from params
-      try {
-        const docRef = doc(db, "stores", storeId);
-        const docSnap = await getDoc(docRef);
-
-        if (docSnap.exists()) {
-          setStore(docSnap.data());
-        } else {
-          console.error("No such document!");
-        }
-      } catch (error) {
-        console.error("There was an error fetching the store content!", error);
-      }
-    };
-
-    fetchStoreContent();
-  }, [params.storeId]); // Add params.storeId to dependency array
-
-  if (!store)
-    return (
-      <h2>
-        <strong>Loading...</strong>
-      </h2>
-    );
 
   const settings = {
     dots: true,
