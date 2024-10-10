@@ -14,7 +14,12 @@ StoreCustomizer is a versatile store management and customization application bu
 ## Demo
 
 You can see a live demo of the application here:
- # [https://abderraoufselidja.github.io/StoreCustomizer-NextJs-App/](https://abderraoufselidja.github.io/StoreCustomizer-NextJs-App/).
+
+# https://abderraoufselidja.github.io/StoreCustomizer-NextJs-App/
+
+Or here:
+
+ # https://store-customizer-next-js-3ri0k93t5-abderraoufselidjas-projects.vercel.app/.
 
 
 ![Demo Screenshot](./src/imgs/Screenshot1.png)
