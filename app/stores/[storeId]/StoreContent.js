@@ -56,9 +56,10 @@ const StoreContent = ({ params }) => {
 
   if (!store)
     return (
-      <h2>
-        <strong>Loading...</strong>
-      </h2>
+       <div className="loading-container">
+      <ClipLoader color="#4A90E2" size={50} />
+      <p className="loading-text">Loading your store, please wait...</p>
+    </div>
     );
 
   const settings = {
